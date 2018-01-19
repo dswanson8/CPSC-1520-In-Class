@@ -26,7 +26,7 @@ function wrapItalicTag (value) {
 }
 
 //wrap value in wrapItalicTag funciton
-var notefooter = document.querySelector('span.note').innerHTML;
-notefooter = wrapItalicTag(notefooter)
+var notefooter = document.querySelector('span.note');
+notefooter.innerHTML = wrapItalicTag(notefooter.innerHTML)
 
-updateInnerHTML('span.note', notefooter);
+// updateInnerHTML('span.note', notefooter);
