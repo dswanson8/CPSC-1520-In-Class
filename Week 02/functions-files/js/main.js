@@ -15,7 +15,18 @@ function updateInnerHTML(selector, newValue) {
     document.querySelector(selector).innerHTML = newValue;
 }
 
-function strong(value) {
-    //  Combining strings to produce a new string is called: concatenation
-    return '<strong>' + value + '</strong>';
+// function strong(value) {
+//     //  Combining strings to produce a new string is called: concatenation
+//     return '<strong>' + value + '</strong>';
+// }
+
+//create italic function
+function wrapItalicTag (value) {
+    return '<i>' + value + '</i>';
 }
+
+//wrap value in wrapItalicTag funciton
+var notefooter = document.querySelector('span.note');
+notefooter.innerHTML = wrapItalicTag(notefooter.innerHTML)
+
+// updateInnerHTML('span.note', notefooter);
