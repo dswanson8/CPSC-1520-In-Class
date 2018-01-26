@@ -39,7 +39,9 @@ var featureImage = document.querySelector('img.feature');
 function featureImageListener(evt) {
     var paragraph = document.querySelector('p.feature.title');
     paragraph.innerHTML = featureImage.alt;
-    paragraph.classList.remove('hidden');
+    featureImage.classList.remove('hidden');
+    evt.preventDefault();
 }
 
 featureImage.addEventListener('mouseover', featureImageListener);
+
