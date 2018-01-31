@@ -5,6 +5,7 @@ function showImage(evt) {
 
     // a) Get a reference to the <img class="feature"> element
     var imgElement = document.querySelector('img.feature');
+    var featureLink = document.querySelector('a.feature.link')
 
     // b) remove the 'hidden' class from the element
     imgElement.classList.remove('hidden');
@@ -36,6 +37,24 @@ var linkElement = document.querySelector('a.feature.link');
 
 // 3) "Wire up" the elements to the event handlers
 linkElement.addEventListener('click', showImage);
+
+
+
+// conditions and Decisions
+// function featureLinkHandler(evt) {
+//     var featureImage = document.querySelector('img.feature');
+//     if (featureImage.classList.contains('hidden') == true ) {
+//         featureImage.src = linkElement.href;
+//         featureImage.classList.remove('hidden');
+//     } else {
+//         featureImage.src = '';
+//         featureImage.classList.add('hidden');
+//     }
+
+//     evt.preventDefault();
+// }
+
+
 
 /*
 
