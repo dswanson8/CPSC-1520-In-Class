@@ -36,3 +36,28 @@ var linkElement = document.querySelector('a.feature.link');
 
 // 3) "Wire up" the elements to the event handlers
 linkElement.addEventListener('click', showImage);
+
+/*
+
+//  Step 1 - Select the link
+//  feature link will reference an anchor tag
+
+var featureLink = document.querySelector('a.link.feature');
+
+//  Step 2 - Create the event listener function (aka event handler)
+function featureLinkHandler(evt) { //  evt parameter is an object representing the event as it is passed to our method
+
+    //  featureImage will reference an image tag
+    var featureImage = document.querySelector('img.feature')
+    feature.src = featureLink.href;
+    //  all elements have a collection of class names that we can access
+    featureImage.classList.remove('hidden');
+
+    //  Stop the default actions of this event
+    evt.preventDefault();
+
+}
+
+//  Step 3 - "Wire up" the elements to the event handlers
+
+*/
