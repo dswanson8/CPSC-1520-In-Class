@@ -6,9 +6,24 @@ behaviour from occurring.
 
 */
 
-var targetImage = document.querySelector('img.target-image')
+var imageLinks = document.querySelector('div.image-links');
+var targetImage = document.querySelector('img.target-image');
 
-function showImage(evt) {
-    var imageLinks = document.querySelector('.image-links')
-    imageLinks.src = 
+
+
+console.log('starting point...');
+
+function changeImage(evt) {
+    console.log('click event activated...');
+    targetImage.setAttribute('src', evt.target); //set attribute to replace clicked target's selected field
+    
+
+    evt.preventDefault();
 }
+
+
+imageLinks.addEventListener('click', changeImage);
+
+
+
+

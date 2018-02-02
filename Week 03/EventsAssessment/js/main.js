@@ -23,17 +23,18 @@ featureLink.addEventListener('click', featureLinkHandler);
 // Note that the featureLinkHandler is not called right now. Instead, it will be called when the click event happens on the featureLink element.
 
 
-//  Question 1
+//  Question 1 - img.alt targetting
 function featureLinkHandler(evt) { //evt parameter is an object representing the event as it is passed to our method
     var featureImage = document.querySelector('img.feature');
     featureImage.src = featureLink.href;
+    //this part is what was changed
     featureImage.alt = featureLink.title;
     featureImage.classList.remove('hidden');
     evt.preventDefault();
 }
 
 
-// //  Question 2
+// //  Question 2 - mouse over function
 
 var featureImage = document.querySelector('img.feature');
 function featureImageListener(evt) {
