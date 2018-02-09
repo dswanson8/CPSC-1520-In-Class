@@ -24,7 +24,7 @@ document.querySelector('.feature.frm').addEventListener('submit', function(evt) 
           tag.value = '';
           error.classList.add('hidden');
         }
-    } else {
+      } else {
         error.classList.remove('hidden');
         error.innerHTML= 'put something on at least';
     }
