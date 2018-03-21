@@ -21,18 +21,24 @@ document.querySelector('[name=toggle]').addEventListener('change', function (evt
     }
 
 });
+  var searchInput, sortSearchInput, table, tableRow, td, counter;
 
   function searchFunction () {
-    var idx = 0;
-    var checkBoxContent = document.querySelectorAll('td');
-    var correct = checkBoxContent;
-    var searchText = document.getElementById('search');
-    var stuffInsideTheTable = document.getElementsByTagName('td');
 
-    while (searchText == stuffInsideTheTable) {
-      if (searchText.innerHTML == stuffInsideTheTable) {
-        stuffInsideTheTable.style.display = "searchText.innerHTML";
+    searchInput = document.querySelector('input#search');
+    sortSearchInput = searchInput.value.toUpperCase();
+    table = document.querySelector('table');
+    tableRow = table.getElementsByTagName('tr');
+
+    for (counter = 1; counter < tableRow.length; counter++) {
+      td = tr[counter].getElementsByTagName('td')[0];
+      if (td) {
+        if (td.innerHTML.toUpperCase().indexOf(sortSearchInput) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = 'none';
+        }
       }
+    }
 
     }
-  }
