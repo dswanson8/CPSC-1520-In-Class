@@ -20,7 +20,7 @@ document.querySelector('.todo-frm').addEventListener('submit', function (evt) {
 		todoText;
 
 	todoText = evt.target.elements['todo-item'].value; //grab value from textbox
-//					 \ <form> / \ <input name=".." /  \text/
+	//					 \ <form> / \ <input name=".." /  \text/
 
 	// adding a todo regardless, so might as well increment now...
 	todoCount += 1;
@@ -42,39 +42,39 @@ document.querySelector('.todo-frm').addEventListener('submit', function (evt) {
 	label.setAttribute('contenteditable', ''); // <label for=todo-1" contenteditable>
 
 
-/*
-	.setAttribute(attributeName, attributeValue) - adds/changes the attribute value
-	.setAttribute(attributeName) - returns the attributevalue
-	.hasAttribute(attributeName) - returns true of the attribute exists
-	.removeAttribute(attributeName) - deletes the attributes from the element
-*/
+	/*
+		.setAttribute(attributeName, attributeValue) - adds/changes the attribute value
+		.setAttribute(attributeName) - returns the attributevalue
+		.hasAttribute(attributeName) - returns true of the attribute exists
+		.removeAttribute(attributeName) - deletes the attributes from the element
+	*/
 
 
 	// build document fragment - "assemble" the various elements
-	label.appendChild(labelText); 	// 	<label> for="todo-1" contenteditable>Todo 1 </label>
-	div.appendChild(checkbox); 			// 	<div>
-																	// 			input type="checkbox" id="todo-1"
-																	//	</div>
-	div.appendChild(label);					//	<div>
-																	//			<input type="checkbox"
+	label.appendChild(labelText); // 	<label> for="todo-1" contenteditable>Todo 1 </label>
+	div.appendChild(checkbox); // 	<div>
+	// 			input type="checkbox" id="todo-1"
+	//	</div>
+	div.appendChild(label); //	<div>
+	//			<input type="checkbox"
 
-// Add some up?down arrows to our <div>
-var upArrow = document.createElement("span");
-var up = "\u21e7";
-var upText = document.createTextNode(up);
-upArrow.setAttribute("class", "arrow up");
-upArrow.appendChild(upText);
-div.appendChild(upArrow);
+	// Add some up?down arrows to our <div>
+	var upArrow = document.createElement("span");
+	var up = "\u21e7";
+	var upText = document.createTextNode(up);
+	upArrow.setAttribute("class", "arrow up");
+	upArrow.appendChild(upText);
+	div.appendChild(upArrow);
 
 
-//todo: Add the code to put a down arrow = \u21e9
+	//todo: Add the code to put a down arrow = \u21e9
 
-var downArrow = document.createElement("span");
-var down = "\u21e9";
-var downText = document.createTextNode(down);
-downArrow.setAttribute("class", "arrow down");
-downArrow.appendChild(downText);
-div.appendChild(downArrow);
+	var downArrow = document.createElement("span");
+	var down = "\u21e9";
+	var downText = document.createTextNode(down);
+	downArrow.setAttribute("class", "arrow down");
+	downArrow.appendChild(downText);
+	div.appendChild(downArrow);
 
 	// add the document fragment to the document for rendering
 	todos.appendChild(div);
@@ -85,12 +85,12 @@ div.appendChild(downArrow);
 	evt.preventDefault();
 
 
-	document,querySelector(".todo-list").addEventListener("click", function () {
+	document, querySelector(".todo-list").addEventListener("click", function () {
 		//check for click on an arrow
 		var targetTodo = evt.target.parentNode;
 		var todoList = targetTodo.parentNode;
 		var siblingTodo;
-	
+
 		if (evt.target.classList.contains("dn")) {
 			siblingTodo = targetTodo.nextElementSibling;
 			//insert the sibling before the target
@@ -100,7 +100,7 @@ div.appendChild(downArrow);
 			//insert the target before the sibling
 			todoList.insertBefore(targetTodo, siblingTodo);
 		}
-	
+
 	});
-	
+
 });
